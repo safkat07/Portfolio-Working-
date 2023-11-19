@@ -3,20 +3,29 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const navLinks = (
     <>
-    <div className="flex gap-3">
-    <NavLink to='/'> <li>Home</li> </NavLink>
-    <NavLink to='/about'> <li>About</li> </NavLink>
-    <NavLink to='/projects'> <li>Projects</li> </NavLink>
-    <NavLink to='/contacts'> <li>Contacts</li> </NavLink>
-    </div>
-      
-
-      
+      <div className="flex gap-3">
+        <NavLink to="/">
+          {" "}
+          <li>Home</li>{" "}
+        </NavLink>
+        <NavLink to="/about">
+          {" "}
+          <li>About</li>{" "}
+        </NavLink>
+        <NavLink to="/projects">
+          {" "}
+          <li>Projects</li>{" "}
+        </NavLink>
+        <NavLink to="/contacts">
+          {" "}
+          <li>Contacts</li>{" "}
+        </NavLink>
+      </div>
     </>
   );
 
   return (
-    <div className="navbar md:px-5 bg-base-100">
+    <div className="navbar  md:px-5 bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className=" lg:hidden">
@@ -42,10 +51,14 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <Link to='/' className=" text-xl font-semibold font-mono">Safkat.dev</Link>
+        <Link to="/" className=" text-xl font-semibold font-mono">
+          Safkat.dev
+        </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu  menu-horizontal px-1  font-semibold">{navLinks}</ul>
+        <ul className="menu  menu-horizontal px-1  font-semibold">
+          {navLinks}
+        </ul>
       </div>
     </div>
   );
